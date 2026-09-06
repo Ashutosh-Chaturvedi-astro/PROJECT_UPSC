@@ -1,27 +1,28 @@
 # 📰 UPSC Newspaper Analyzer
 
-A full-stack MERN-style web application that analyzes newspaper articles for **UPSC Civil Services exam** relevance. Powered by the **Google Gemini AI** API, it extracts key topics, maps them to UPSC syllabus sections, and provides structured study notes.
+An AI-powered full-stack web application that analyzes newspaper PDFs for UPSC Civil Services Exam relevance. Powered by the Google Gemini API, it extracts key topics, maps them to UPSC syllabus sections, and provides structured study insights.
 
 ---
 
 ## 🚀 Tech Stack
 
-| Layer    | Technology                            |
-|----------|---------------------------------------|
+| Layer | Technology |
+|-------|------------|
 | Frontend | React 19, Vite, Tailwind CSS v4, Framer Motion |
-| Backend  | Node.js, Express 5, Multer            |
-| AI       | Google Gemini API (`@google/genai`)   |
+| Backend | Node.js, Express 5, Multer |
+| AI | Google Gemini API (`@google/genai`) |
 
 ---
 
 ## 📁 Project Structure
 
-```
-UPSCNewspaperAnalyzer/
+```text
+ai-upsc-newspaper-analyzer/
 ├── client/          # React + Vite frontend
 │   ├── src/
 │   ├── public/
 │   └── index.html
+│
 └── server/          # Express backend
     ├── controllers/
     ├── routes/
@@ -29,53 +30,66 @@ UPSCNewspaperAnalyzer/
     ├── utils/
     ├── prompts/
     └── app.js
-```
-
----
-
-## ⚙️ Getting Started
-
-### Prerequisites
-- Node.js v18+
-- A [Google Gemini API key](https://aistudio.google.com/app/apikey)
-
-### 1. Clone the repo
-```bash
-git clone https://github.com/Amar0269/UPSCResumeAnalyzer.git
-cd UPSCResumeAnalyzer
-```
-
-### 2. Setup the Server
-```bash
+⚙️ Getting Started
+Prerequisites
+Node.js v18+
+A Google Gemini API key from Google AI Studio
+1. Clone the repository
+git clone https://github.com/SumitKurmii/ai-upsc-newspaper-analyzer.git
+cd ai-upsc-newspaper-analyzer
+2. Set up the Server
 cd server
 npm install
-cp .env.example .env
-# Add your GEMINI_API_KEY to .env
-npm run dev
-```
 
-### 3. Setup the Client
-```bash
+Create a .env file based on .env.example and add your Gemini API key:
+
+PORT=7001
+GEMINI_API_KEY=your_api_key_here
+
+Then start the server:
+
+npm run dev
+3. Set up the Client
+
+Open another terminal from the project root:
+
 cd client
 npm install
 npm run dev
-```
 
-The client runs on `http://localhost:5173` and the server on `http://localhost:7001`.
+The client runs at http://localhost:5173 and the server runs at http://localhost:7001.
 
----
+🔑 Environment Variables
 
-## 🔑 Environment Variables
+The server requires the following environment variables:
 
-See [`server/.env.example`](server/.env.example) for required variables.
+Variable	Description
+PORT	Port for the Express server
+GEMINI_API_KEY	Your Google Gemini API key
+CLIENT_URL	URL of the frontend application
 
-| Variable         | Description                    |
-|------------------|--------------------------------|
-| `PORT`           | Port for the Express server    |
-| `GEMINI_API_KEY` | Your Google Gemini API key     |
+See server/.env.example for the required configuration.
 
----
+✨ Features
+Upload newspaper PDFs
+AI-powered newspaper analysis
+Extract UPSC-relevant topics
+GS Paper classification
+Subject-wise categorization
+Prelims and Mains relevance
+Key issues and important facts
+Structured study insights
+UPSC-focused summaries
+📄 License
 
-## 📄 License
+This project is licensed under the MIT License.
 
-MIT
+
+One important point: if you **did not actually add an MIT `LICENSE` file** when creating the GitHub repository, then don't claim MIT yet. Either add an MIT license or change the last section.
+
+Since your repository already has a local README, after replacing its content run:
+
+```powershell
+git add README.md
+git commit -m "Update project README"
+git push
