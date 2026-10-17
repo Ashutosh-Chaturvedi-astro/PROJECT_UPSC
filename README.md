@@ -35,7 +35,6 @@ Prerequisites
 Node.js v18+
 A Google Gemini API key from Google AI Studio
 1. Clone the repository
-git clone https://github.com/SumitKurmii/ai-upsc-newspaper-analyzer.git
 cd ai-upsc-newspaper-analyzer
 2. Set up the Server
 cd server
